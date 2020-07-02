@@ -11,10 +11,24 @@
 |
 */
 
-Route::get('/','HomeController@index');
+Route::get('/',function(){
+    return view('items.table');
+});
+
+Route::get('/data-tables',function(){
+    return view('items.dataitems');
+});
 
 Route::get('/register', 'AuthController@register');
 
 Route::get('/welcome', 'AuthController@welcome');
 
 Route::post('/welcome', 'AuthController@post');
+
+Route::get('/master', function(){
+    return view('master');
+});
+
+Route::get('/items', function(){
+    return view('items.index');
+});
