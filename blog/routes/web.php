@@ -15,20 +15,10 @@ Route::get('/',function(){
     return view('items.table');
 });
 
-Route::get('/data-tables',function(){
-    return view('items.dataitems');
-});
-
-Route::get('/register', 'AuthController@register');
-
-Route::get('/welcome', 'AuthController@welcome');
-
-Route::post('/welcome', 'AuthController@post');
-
-Route::get('/master', function(){
-    return view('master');
-});
-
-Route::get('/items', function(){
-    return view('items.index');
-});
+Route::get('/pertanyaan/create', 'PertanyaanController@create');
+Route::post('/pertanyaan', 'PertanyaanController@store'); //Menyimpan data
+Route::get('/pertanyaan', 'PertanyaanController@index'); // menampilkan data
+Route::get('/pertanyaan/{id}', 'PertanyaanController@show');
+Route::get('/jawaban/create', 'JawabanController@create');
+Route::get('/jawaban/{pertanyaan_id}', 'JawabanController@show');
+Route::post('/jawaban/{pertanyaan_id}', 'JawabanController@store'); //Menyimpan data
