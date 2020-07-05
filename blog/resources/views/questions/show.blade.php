@@ -19,7 +19,6 @@
           <tr>
             <td>{{$item->id}}</td>
             <td>{{$item->judul}}</td>
-            <td>{{$item->isi}}</td>
             <td><td><a href="/jawaban/create" class="btn btn-sm btn-info">Reply</a></td></td>
           </tr>
               

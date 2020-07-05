@@ -34,6 +34,7 @@
           </div>
           <!-- /.card-body -->
           <div class="card-footer">
+            <a href="/" class="mr-2 btn btn-info">Back</a>
             <button type="submit" class="btn btn-primary">Submit</button>
           </div>
         </form>

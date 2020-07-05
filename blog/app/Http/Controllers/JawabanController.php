@@ -8,7 +8,7 @@ use App\Models\jawabanModel;
 class JawabanController extends Controller
 {
     public function create() {
-        return view('items.answer');
+        return view('answer.answer');
     }
 
     public function store(Request $request){
@@ -20,6 +20,11 @@ class JawabanController extends Controller
     public function index() {
         $items = jawabanModel::get_all();
 
-        return view('items.index');
+        return view('answer.index');
+    }
+
+    public function show($id) {
+        $item = pertanyaanModel::find_by_id($id);
+        return view('items.show', compact('item'));
     }
 }
